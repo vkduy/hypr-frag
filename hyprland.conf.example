@@ -1,0 +1,4 @@
+# https://wiki.hypr.land/Configuring/Variables/#decoration
+decoration {
+    screen_shader = ~/.config/hypr/screen_shader/darkroom.frag
+}
