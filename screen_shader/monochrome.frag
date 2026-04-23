@@ -16,7 +16,8 @@ float contrast(float i_lum, float i_factor)
 void main() {
     vec4 pixColor = texture(tex, v_texcoord);
 
-    float lum = dot(pixColor.rgb, vec3(0.2126, 0.7152, 0.0722));
+    const vec3 k_lum = vec3(0.2126, 0.7152, 0.0722);
+    float lum = dot(pixColor.rgb, k_lum);
 
     const float k_contrast_factor = 0.7;
     float lum_low_contrast = contrast(lum, k_contrast_factor);
